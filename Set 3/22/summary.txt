@@ -1,0 +1,5 @@
+Construct a programme which takes an arguement of a number of blue or brown eyed
+people. A line of these people is generated with each person adding to the line
+placing themself after the last brown eyed person. Since no one knows their own
+eye colour it is determined when they are added to the line. When the line is 
+finished it is outputted.

@@ -1,0 +1,3 @@
+Answers questions about various return and parameter types. State if it's ever
+appropriate to use them and give an example of code where it would be appropriate
+if applicable.

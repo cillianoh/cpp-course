@@ -1,0 +1,7 @@
+summary.txt
+main.ih
+main.cc
+envToStrings.cc
+quicksort.cc
+partition.cc
+caseInsensitiveLess.cc

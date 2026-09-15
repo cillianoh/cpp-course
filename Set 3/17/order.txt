@@ -1,0 +1,6 @@
+summary.txt
+main.ih
+main.cc
+hasDots.cc
+sum2.cc
+sum1.cc

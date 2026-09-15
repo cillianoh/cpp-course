@@ -1,0 +1,2 @@
+Construct a program which displays the arguement referenced in argv[1] if present
+, using a struct.

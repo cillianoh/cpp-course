@@ -1,0 +1,3 @@
+Construct a program which contains two overloaded sum functions. If one of the
+arguements contains a '.' use the double sum function. If not use the int sum
+function.

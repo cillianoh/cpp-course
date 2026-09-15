@@ -1,0 +1,2 @@
+Construct a word count program which can determine the number of chars, words or
+lines in the input stream and outputs the result

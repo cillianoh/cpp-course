@@ -1,5 +1,6 @@
 #include "main.ih"
 
+//displays all subjects in line with their correct eye colour
 void displaySubjects(size_t (&line)[maxLine], size_t nSubjects)
 {
                                           //for subjects leaving output eye colour
