@@ -1,0 +1,4 @@
+Construct a programme which takes command line arguements of bits representing
+an int and 'ror' or 'rol'. Rotate this bit-string, keeping the specified
+direction from input and the original number of bits. Output this as a
+bit-string, a decimal value and a hexadecimal value.

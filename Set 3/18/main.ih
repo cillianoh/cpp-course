@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+namespace Icmake
+{
+    extern char version[];
+    extern char years[];
+    extern char author[];
+};
+
+void usage(std::string const &progname);
+
+struct ReturnValues
+{
+    bool ok;                                 // true if arg no. exists
+    size_t nr;                               // no. of requested arg
+    string value;                            // requested arguement
+};
+
+ReturnValues combine(int argc, char **argv); // constructs returnValue struct
+
+bool structCall(int argc, char **argv);      // returns false if no arguments
+                                             // otherwise prints arg and no.
+
+void boundCall(int argc, char **argv);       // outputs arg no. and value
+
+
+

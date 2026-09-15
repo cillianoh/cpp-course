@@ -1,0 +1,26 @@
+Describe six aspects of C++ that are not available in C
+
+1.  C++ introduces Namespaces, where all symbols are defined in a larger
+    context. This avoids conflicts that can arise when dealing with multiple
+    functions defined with the same name.
+
+2.  C++ introduces References for defining synonyms for variables. They act 
+    as an alias for the variable and allow you to pass a modifiable argument
+    to a function.
+
+3.  C++ introduces a reference type called rvalue reference. These are often
+    temporary, anonymous values that can remove the need to make a copy of a
+    temporary object's NTBS and instead transfer the pointer value to a new
+    owner.
+
+4.  In C++ enumeration values are enum types and this allows for stricter type
+    checking. Along with this the enum class is new and prevents implicit integer 
+    conversions.
+
+5.  In C++ initializer lists can initialise arrays and structs and are 
+    recursive. Unlike in C, std::initializer_list allows functions/constructors
+    to accept lists with arbitrary lengths.
+
+6.  C++ contains the keyword auto which can simplify type definitions of
+    variables and return types of functions if the compiler is able to 
+    determine the proper types of such variables or functions.

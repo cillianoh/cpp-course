@@ -1,0 +1,16 @@
+#include <iostream>
+#include <string>
+
+namespace Icmake
+{
+    extern char version[];
+    extern char years[];
+    extern char author[];
+};
+
+void usage(std::string const &progname);
+int sum(int argc, char **argv, int result);             //sum1.cc
+double sum(int argc, char **argv, double result);       //sum2.cc
+bool hasDots(int argc, char **argv);                    //hasdots.cc
+
+using namespace std;

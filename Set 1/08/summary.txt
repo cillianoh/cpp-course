@@ -1,0 +1,2 @@
+Construct a programme which takes command line arguments of an ip4 address
+then outputs the address's netmask.

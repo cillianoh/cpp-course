@@ -1,0 +1,20 @@
+What commands were entered in Cygwin64 Terminal?
+    cd c:/users/chall/documents/c++/homework/'Set 1'/01
+    g++ -std=c++26 -Wall -Werror -c hello.cpp
+    g++ hello.o -o hello -s
+    ./hello
+
+What are .o and .exe files?
+    .o files are machine code. It isn't executable as there are no 
+    executables yet.
+    .exe is an executable program file used on Windows. Contains binary code
+    the CPU reads directly.
+
+Program Output:
+    Hello World
+
+File Sizes (in bytes):
+    Source file = 114
+    Object file = 6977
+    Executable program = 9216
+    iostream = 3094

@@ -1,0 +1,2 @@
+Construct a programme which sums the digits of its arguement until only one
+digit is left. Then output whether the final digit is divisible by three.

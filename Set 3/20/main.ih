@@ -1,0 +1,22 @@
+#include <iostream>
+#include <string>
+
+namespace Icmake
+{
+    extern char version[];
+    extern char years[];
+    extern char author[];
+};
+
+void usage(std::string const &progname);
+
+void wc(char arg);                               //determine wich count function
+                                                 // to call
+size_t nChars();                                 //returns the number of chars
+                                                 // in istream
+size_t nWords();                                 //returns the number of words 
+                                                 // in istream
+size_t nLines();                                 //returns the number of lines
+                                                 // in istream
+
+using namespace std;

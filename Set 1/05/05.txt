@@ -1,0 +1,28 @@
+What are 'escape sequences'?
+    Escape sequences are a combination of characters used in string literals
+    or character constants to represent special characters that cannot be
+    typed directly or have distinct structural meaning to the compiler.
+
+What standard 'escape sequences' are defined in C++ and what are their 
+meanings?
+    Escape sequence	| Description
+    \'		| single quote
+    \"		| double quote
+    \?		| question mark
+    \\		| backslash
+    \a		| audible bell
+    \b		| backspace
+    \f		| form feed - new page
+    \n		| line feed - new line
+    \r		| carriage return
+    \t		| horizontal tab
+    \v		| vertical tab
+    \nnn	| arbitrary octal value
+    \o{n...}	| arbitrary octal value
+    \xn…	| arbitrary hexadecimal value
+    \x{n...}	| arbitrary hexadecimal value
+    \c		| implantation-defined
+    \unnnn	| arbitrary Unicode value; may result in several code units
+    \u{n...}	| arbitrary Unicode value; may result in several code units
+    \Unnnnnnnn  | arbitrary Unicode value; may result in several code units
+    \N{name}	| arbitrary Unicode character

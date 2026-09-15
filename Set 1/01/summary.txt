@@ -1,0 +1,2 @@
+Construct a programme that outputs "hello world" and state the commands that 
+were entered to run it.

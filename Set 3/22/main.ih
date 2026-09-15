@@ -1,0 +1,31 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+namespace Icmake
+{
+    extern char version[];
+    extern char years[];
+    extern char author[];
+};
+
+void usage(std::string const &progname);
+
+size_t const maxLine = 100;
+
+void rSeed(int argc, char **argv);                //uses 2nd arg as seed if there
+
+void unencrypt();                                 //output unencrypted text
+
+string deCaesar(string encrypted);                //returns an unencrypted string
+                                                  //adds no. of subjects to line
+void addSubjects(size_t (&line)[maxLine], size_t nSubjects);
+
+                                                  //inserts subject at place in
+                                                  //line
+void insertSubject(size_t (&line)[maxLine], size_t place);
+
+                                                  //display all subjects in line
+void displaySubjects(size_t (&line)[maxLine], size_t nSubjects);
+                                                  
+int newSubject();                                 //generates random no. (1 or 2)

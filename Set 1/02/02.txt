@@ -1,0 +1,30 @@
+What is the difference between a declaration and a definition in C++?
+    A declaration introduces an identifier and a type into a program, which
+    can then be safely referenced and visible in the compiler
+    A definition tells the compiler where space is allocated and how an item
+    will behave.
+
+What are header files used for?
+    Headers are used to share declarations across multiple source files, 
+    allowing the program to read code from another file without having to
+    copy it into the main file.
+
+When a program is created in a compiler, in what part of the construction are
+the header files used and in what part the libraries?
+    Header files are used during pre-processing when the compiler copies all
+    referenced code into the source code file.
+    Libraries contain the real implementation of those functions to build the
+    final executable file.
+
+Is a library an object module?
+    Libraries are a large collection of packages and modules which can then
+    be indexed and added to source code during the linking stage where
+    necessary. It is a large collection of object modules, not one specific
+    one.
+
+Why is an object file obtained after compiling a source and not a .exe file?
+    An object file is a simple binary file but does not contain the specific
+    file headers and entry points an operating system would need to run it.
+    It also only has calls to other modules and libraries. It acts as a 
+    bridge to an executable file where final references to separate object
+    files can be added.

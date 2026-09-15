@@ -1,0 +1,12 @@
+Results
+129 125 3 162 32 => 129.125.3.162
+129 125 3 162 28 => 129.125.3.160
+129 125 3 162 24 => 129.125.3.0
+129 125 3 162 20 => 129.125.0.0
+129 125 3 162 16 => 129.125.0.0
+
+Explain why the last two outputs are equal.
+The last two outputs are equal because the third octet has a value
+0b00000011. When the fifth argument is 20 it only takes the 4 left-
+most bits in this bit string, which are all zero, therefore being equal
+to the netmask obtained with 16 as the fifth argument.

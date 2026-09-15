@@ -1,0 +1,2 @@
+Construct a programme showing all combinations of a command lines arguments.
+Display on a numbered line.

@@ -1,0 +1,27 @@
+How does the compiler interpret the statement?
+    The compiler interprets it as an if statement with an if else statement
+    inside it.
+
+Rewrite the statement using the correct layout.
+if (first == test1)
+    if (second == test2)
+        value = 5;
+    else
+        value = 6;
+
+How could you alter the statement to use a `non-default' interpretation?
+if (first == test1){
+    if (second == test2)
+        value = 5;
+}
+else
+    value = 6;
+
+Describe how this altered statement is used.
+If the first if-statement is true the next if statement is tested, and if true
+value is set to 5. If the first if-statement is false the else statement is run.
+
+What is the flaw in this program that isn't related to the layout?
+The main logical flaw is that if first != test1 the else statement is left
+unused as it is connected to the second if statement. This causes value not
+to be set. You can fix this by wrapping the second if statement in curly braces.

@@ -1,0 +1,2 @@
+Construct a program which reads information from the standard input stream and
+counts the number of a-, e-, and i-characters

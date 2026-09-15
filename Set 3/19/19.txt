@@ -1,0 +1,123 @@
+1. It is appropriate to define an int-type parameter when your value is small,
+has natural numbers and can be positive or negative. In the code example this
+is illustrated because the value could be negative.
+
+    int difference = value1 - value2;
+
+2. It is appropriate to define a std::string value parameter when dealing with
+text and more functionality is needed, provided by the string class. In the 
+code example this is illustrated because the text is too long to handle with 
+chars alone.
+
+    std::string string = "hello world, this is too long and awkward for chars";
+
+3. It is appropriate to define a const reference to an int-type parameter when
+a numeric value could be positive or negative and will not be changed. In the 
+code example this is illustrated becauese the value will not change
+
+    int depth = -2;
+    int const &depthOfTrench = depth;
+
+4. It is appropriate to define a const reference to a std::string parameter when
+it is a lot of text that will not be changed and only referenced. In the code 
+example this is illustrated because the alphabet will never be changed.
+
+    std::string alphabet = "abcdefghijklmnopqrstuvwxyz";
+    std::string const &letters = alphabet;
+
+
+5. It is appropriate to define a non-const reference to an int-type parameter
+when you have an int that you might change but dont want to copy due to
+efficiency. In the code example this is illustrated because the int can may be
+updated constantly but it is more efficient to reference it then copy it each
+time
+
+    int currentHeight = 22990;
+    int &altitude = currentHeight;
+
+6. It is appropriate to define a non-const reference to a std::string value
+parameter when the string is too long to copy efficiently for each change.
+In the code example this is illustrated because the string is long and when
+one user is changed it would be inefficent to copy the whole string.
+
+    std::string listOfUsers = "alpha beta charlie delta echo fox";
+    std::string &users = listOfUsers;
+
+7. It is appropriate to define a const rvalue-reference to an int value parameter
+when you have a temporary int that will need to be referenced, without change, 
+for a function. In the code example this is illustrated because the int is a 
+temporary value but will need to be referenced.
+
+    int const &tempPassword = 4312913;
+    
+8. It is appropriate to define a const rvalue-reference to a std::string value
+parameter when you have a temporary string that will need to be referenced and
+it will not be changed in the code. In the code example this is illustrated 
+because the string is a temporary value that would be too long to be copied and
+will not be changed.
+
+    std::string User1, User2, User3;
+    std::string const &currentUsers = User1 + User2 + User3;
+
+9. It is appropriate to define an rvalue-reference to an int-type parameter when
+you have a temporary int that will need to be used in your function but it does
+not need to be copied for efficiency. In the code example this is illustrated
+because the int may be changed but it would be not be efficient to constantly
+copy its value.
+
+    int &currentPlayers = 38189;
+
+10. It is appropriate to define an rvalue-reference to a std::string parameter
+when you have a temporary string that will be updated but it would be unefficient
+to copy it each time. In the code example this is illustrated because the string
+will be changed but it starts as a temporary value.
+
+    std::string &vipList = "jack james john joe";
+
+11. It is appropriate to return an int-type value when the function results
+in a positive or negative small number. In the code example this is illustrated
+because the difference could be negative and it will be quite small.
+
+    int difference(int value1, int value2)
+    {
+        result = value1 - value2;
+        return result;
+    }
+
+12. It is appropriate to return a std::string value when the function creates
+a string that is stored as a local variable in the function and would be removed
+when the function terminates. In the code example this is illustrated because the
+string would be removed when the function terminates.
+
+    string listOfUsers(char users[10])
+    {
+        std::string listOfUsers = "";
+        for (int indx = 0, indx != 10, ++indx)
+            listOfUsers += users[indx];
+        return listOfUsers;
+    }
+
+13. It isn't appropriate to return a const reference to an int as the variable
+would be deleted on termination of the function.
+
+14. It isn't appropriate to return a const reference to a std::string as the
+variable would be deleted on termination of the function.
+
+15. It isn't appropriate to return a non-const reference to an int as the 
+variable would be deleted on termination of the function.
+
+16. It isn't appropriate to return a non-const reference to a std::string as
+the variable would be deleted on termination of the function.
+
+17. It isn't appropriate to return a const rvalue-reference to an int as the
+rvalue would be deleted on termination of the function.
+
+18. It isn't appropriate to return a const rvalue-reference to a std::string
+as the rvalue would be deleted on termination of the function.
+
+19. It isn't appropriate to return an rvalue-reference to an int as the rvalue
+would be deleted on termination of the function.
+
+20. It isn't appropriate to return an rvalue-reference to a std::string as the
+rvalue would be deleted on termination of the function.
+     
