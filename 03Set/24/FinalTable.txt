@@ -1,0 +1,42 @@
+Flat profile:
+
+    Each sample counts as 0.01 seconds.
+Opti. %   cumulative   self              self     total           
+     time   seconds   seconds    calls  ms/call  ms/call  name    
+NO   35.99      0.41     0.41 10000000     0.00     0.00  fun
+NO   31.60      0.77     0.36 10000000     0.00     0.00  fun2
+
+O1   40.06      0.04     0.04 10000000     0.00     0.00  fun
+O1   10.01      0.09     0.01 10000000     0.00     0.00  fun2
+
+O2    0.00      0.03     0.00 10000000     0.00     0.00  fun
+O2    0.00      0.03     0.00 10000000     0.00     0.00  fun2
+
+O3   0.00      0.00     0.00 10000000     0.00     0.00  fun
+O3   0.00      0.00     0.00 10000000     0.00     0.00  fun2
+
+Rows from other functions where removed for clarity.
+
+NO allows none of GCC's optimisations to run
+O1 uses only basic,cheap optimisations like allocation, simple dead-code removal
+and basic instruction. This allows for a fast compile time but not great 
+performance
+O2 uses the majority of GCC's optimisations that don't trade code size for speed
+like function inlining, loop optimisations, instruction scheduling and dead-code
+elimination.
+O3 uses all of GCC's optimisations. This includes all of the above and heavier
+function inlining, loop unrolling and auto-vectorization which improves speed
+but causes larger binaries.
+
+With no optimisation the cost of passing str by value in fun is clear as it takes
+0.05 self seconds
+At O1 both functions are much faster but the gap between the widens. The
+optimisation does help with efficiency but there is still a significant
+difference in passing an address or value
+At O2 and O3 both functions have 0.00 self time. This is most likely due to the
+compiler recognising the computed value (sum) is not used anywhere and removed
+the function bodies as dead code.
+
+For both O1 and NO we see much quicker speeds when str is passed as a reference.
+For O2 and O3 the code was too fast or removed due to optimisation so no 
+measurement was obtained.

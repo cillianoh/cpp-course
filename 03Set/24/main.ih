@@ -1,0 +1,17 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+namespace Icmake
+{
+    extern char version[];
+    extern char years[];
+    extern char author[];
+};
+
+void usage(std::string const &progname);
+void fun(string str);                               //sums digits in string
+                                                    //sums digits in const
+void fun2(string const &str);                       //string reference
+void callValue(string const &prog);                 //passes value to fun
+void callRef(string const &prog);                   //passes ref to fun2

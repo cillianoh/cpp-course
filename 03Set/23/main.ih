@@ -1,0 +1,18 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+namespace Icmake
+{
+    extern char version[];
+    extern char years[];
+    extern char author[];
+};
+
+void usage(std::string const &progname);
+string argvToString(char *argv);           //change chars in argv to string bar '
+string fixText(string argString);          //get text and remove double args
+                                           //remove double chars in string
+void removeChars(string &nextLine, char arg);
+                                           //remove trailing whitespace
+void removeTrailingBlanks(string &nextLine);
