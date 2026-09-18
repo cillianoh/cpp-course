@@ -11,14 +11,14 @@ ReturnValues combine(int argc, char **argv)
                                                       //indexs, then true
     returnValues.ok = indx > 1 && indx - 1 <= argc ? true : false;
     
-    if (returnValues.ok)                              //if requested arg exists
+    if (!returnValues.ok)                             //if requested arg doesnt
     {
-        returnValues.nr = static_cast<size_t> (indx); //arg no. is indx
-        returnValues.value = string(argv[indx - 1]);  //arg value is set
+        returnValues.value = "";                      //exist, value is blank
+        return returnValues;                          //return struct
     }
-    else
-        returnValues.value = "";                      //if requested arg doesnt
-                                                      //exist, value is blank
+
+    returnValues.nr = static_cast<size_t> (indx);     //arg no. is indx
+    returnValues.value = string(argv[indx - 1]);      //arg value is set
 
     return returnValues;                              //return struct
 }

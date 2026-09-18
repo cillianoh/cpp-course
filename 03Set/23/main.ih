@@ -10,8 +10,9 @@ namespace Icmake
 };
 
 void usage(std::string const &progname);
-string argvToString(char *argv);           //change chars in argv to string bar '
+
 string fixText(string argString);          //get text and remove double args
+
                                            //remove double chars in string
 void removeChars(string &nextLine, char arg);
                                            //remove trailing whitespace

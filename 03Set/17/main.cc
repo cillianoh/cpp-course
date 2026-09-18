@@ -3,13 +3,8 @@
 int main(int argc, char **argv)
 {
     if (hasDots(argc, argv))                   //if there is a dot in arguments
-    {
-        double result = sum(argc, argv, 0.0);  //then result is a double
-        cout << result;  
-    }
+        cout << sum(argc, argv, 0.0) << '\n';  //then result is a double
+    
     else
-    {
-        int result = sum(argc, argv, 0);       //else result is an int
-        cout << result;  
-    }
+        cout << sum(argc, argv, 0) << '\n';       //else result is an int
 }

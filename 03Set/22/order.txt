@@ -1,10 +1,10 @@
 summary.txt
 main.ih
-main.cc
 rSeed.cc
-addSubjects.cc
-displaySubjects.cc
 unencrypt.cc
-insertSubject.cc
 deCaesar.cc
+addSubjects.cc
+insertSubject.cc
+displaySubjects.cc
 newSubject.cc
+main.cc

@@ -1,22 +1,22 @@
 #include "main.ih"
 
 //inserts a subject at a specific place in list
-void insertSubject(size_t (&line)[maxLine], size_t place)
+void insertSubject(size_t *line, size_t place, size_t nSubjects)
 {
-    size_t tempLine[maxLine]{};
+    size_t tempLine[nSubjects]{};
 
-    for (size_t indx = 0; indx != maxLine; ++indx)  //for full array
+                                                  //for full array
+    for (size_t indx = 0; indx != nSubjects; ++indx)
     {
-        if (indx < place)                           //don't change elemenets 
-                                                    //before insertion place
-            tempLine[indx] = line[indx];
-        else if (indx == place)                     //at insertion place generate
-                                                    //a new subject
-            tempLine[indx] = newSubject();
-        else                                        //fill the rest with old els
-            tempLine[indx] = line[indx - 1];
+                                                  //don't change before
+                                                  //insertion place, add new
+                                                  //subject at place and fill
+                                                  //the rest with old els
+        tempLine[indx] = indx < place ? line[indx]
+                         : indx == place ? newSubject()
+                         : line[indx - 1];
     }
-
-    for (size_t indx = 0; indx != maxLine; ++indx)  //update the original list
+                                                  //update the original list
+    for (size_t indx = 0; indx != nSubjects; ++indx)
        line[indx] = tempLine[indx]; 
 }

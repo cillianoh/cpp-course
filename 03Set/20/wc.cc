@@ -3,21 +3,24 @@
 //choose what to count depending on arguement and output the formatted results
 void wc(char arg)
 {
+    size_t num{};
     switch (arg)
     {
         case 'c':                 //if arg is c output no. of chars in istream
-            cout << nChars() << '\n';
+            num = nChars();
         break;
         
         case 'w':                 //if arg is w output no. of words in istream
-            cout << nWords() << '\n';
+            num = nWords();
         break;
 
         case 'l':                 //if arg is l output no. of lines in istream
-            cout << nLines() << '\n';
+            num = nLines();
         break;
         
         default:
         break;
     }
+
+    cout << num << '\n';
 }

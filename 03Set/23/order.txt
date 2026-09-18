@@ -1,7 +1,6 @@
 summary.txt
 main.ih
-main.cc
-argvToString.cc
 fixText.cc
-removeTrailingBlanks.cc
 removeChars.cc
+removeTrailingBlanks.cc
+main.cc

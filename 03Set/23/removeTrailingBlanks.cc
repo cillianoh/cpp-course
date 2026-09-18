@@ -5,5 +5,5 @@ void removeTrailingBlanks(string &nextLine)
 {  
                                             //remove the trailing blanks and
                                             //update string
-    nextLine = nextLine.substr(0, nextLine.find_last_not_of(" \t\r") + 1); 
+    nextLine.resize(nextLine.find_last_not_of(" \t\r") + 1);
 }

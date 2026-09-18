@@ -1,0 +1,19 @@
+ What is encapsulation and data hiding?
+ Encapsulation and data hiding is where data and functions are combined
+ together in a class so the only way to interact with the data is through 
+ public functions in that class. They're important because it means that 
+ variables are protected and a user of the class only needs to know what it 
+ does, not how it does it.
+
+ Code Example:
+    class BankAccount
+    {   
+        double balance;
+        
+        public:
+            void deposit(double amount);
+    };
+ 
+ Why is the interface irrelevant?
+ The interface is irrelevant since it is made outside the class and the
+ interface tells you everything you need to know about the class.

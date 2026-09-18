@@ -1,7 +1,7 @@
 summary.txt
 main.ih
-main.cc
 wc.cc
 nChars.cc
 nWords.cc
 nLines.cc
+main.cc

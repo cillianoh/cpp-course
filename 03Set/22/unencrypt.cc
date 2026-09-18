@@ -4,9 +4,9 @@
 void unencrypt()
 {
     string encrypted;
-    getline(cin, encrypted, '\0');          //extract encrypted text from istream
+    getline(cin, encrypted, '\0');     //extract encrypted text from istream
                                             
-                                            //unencrypt
+                                       //unencrypt
     string unencrypted = deCaesar(encrypted);
-    cout << unencrypted;                    //output
+    cout << unencrypted;               //output
 }

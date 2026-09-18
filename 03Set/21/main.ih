@@ -1,4 +1,4 @@
-#include <iostream>
+include <iostream>
 #include <string>
 
 namespace Icmake
@@ -12,24 +12,19 @@ void usage(std::string const &progname);
 
 using namespace std;
 
-size_t const maxEntries = 1000;                  //max elements allowed in string
-                                                 // array
+size_t countEnvp(char **envp);       //counts no. of environmental variables
 
-                                                 //transfers envp variables to 
-                                                 // string array and counts the 
-                                                 // number of them
-size_t envToStrings(string (&array)[maxEntries], char **envp);
+                                    //transfers envp variables to string array
+void envToStrings(string (&array)[], char **envp);
 
-                                                 //recursive quicksort function
-void quicksort(string (&array)[maxEntries], size_t left, size_t right);
+                                    //recursive quicksort function
+void quicksort(string (&array)[], size_t left, size_t right);
                                                  
-                                                 //organises array so that left
-                                                 //of pivot is < pivot and right
-                                                 //of pivot is > pivot
-size_t partition(string (&array)[maxEntries], size_t left, size_t right);
+                                    //organises array so that left of pivot is
+                                    // < pivot and right of pivot is > pivot
+size_t partition(string (&array)[], size_t left, size_t right);
 
-                                                 //compares two strings
-                                                 //insensitive of case. true if
-                                                 //left should be before right
+                                    //compares two strings insensitive of case.
+                                    // true if left should be before right
 bool caseInsensitiveLess(string const &lhs, string const &rhs);
 

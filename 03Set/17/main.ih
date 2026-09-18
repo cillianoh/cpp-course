@@ -9,8 +9,9 @@ namespace Icmake
 };
 
 void usage(std::string const &progname);
-int sum(int argc, char **argv, int result);             //sum1.cc
-double sum(int argc, char **argv, double result);       //sum2.cc
-bool hasDots(int argc, char **argv);                    //hasdots.cc
+
+int sum(size_t argc, char **argv, int result);             //sum1.cc
+double sum(size_t argc, char **argv, double result);       //sum2.cc
+bool hasDots(size_t argc, char **argv);                    //hasDots.cc
 
 using namespace std;

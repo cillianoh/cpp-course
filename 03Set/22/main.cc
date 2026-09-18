@@ -6,7 +6,7 @@ int main(int argc, char **argv)
     
     size_t nSubjects = atoi(argv[1]);
 
-    size_t line[maxLine]{};
+    size_t line[nSubjects]{};
     addSubjects(line, nSubjects);       //add subjects to ferry line
    
     displaySubjects(line, nSubjects);   //display subjects
