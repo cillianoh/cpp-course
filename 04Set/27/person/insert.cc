@@ -1,7 +1,6 @@
-#include "person.h"
-#include <ostream>
+#include "person.ih"
 
-void Person::insert(std::ostream &out) const
+void Person::insert(ostream &out) const
 {
       out << d_name                 // inserts data of person to ostream 
           << ", " << d_address

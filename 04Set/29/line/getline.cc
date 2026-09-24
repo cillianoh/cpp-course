@@ -8,6 +8,6 @@ bool Line::getLine()
                                        // non-ws char
     d_pos = d_line.find_first_not_of(" \t");
 
-                                       
-    return d_pos != string::npos;      // return true if line has no ws chars
+                                       // return true if line has no ws chars
+    return d_pos != string::npos;
 }

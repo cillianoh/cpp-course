@@ -1,5 +1,4 @@
-#include "line.h"
+#include "person.h"
 #include <iostream>
 
 using namespace std;
-

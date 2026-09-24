@@ -1,7 +1,6 @@
-#include "person.h"
-#include <iostream>
+#include "person.ih"
 
-void Person::setPhone(std::string const &phone)
+void Person::setPhone(string const &phone)
 {
     if (phone.empty())                  // if empty string passed set as 
                                         // unavailable
@@ -10,5 +9,5 @@ void Person::setPhone(std::string const &phone)
     else if (hasOnly("0123456789", phone))
         d_phone = phone;
     else                                // if invalid form output it
-        std::cout << "A phone number may only contain digits\n";
+        cout << "A phone number may only contain digits\n";
 }
