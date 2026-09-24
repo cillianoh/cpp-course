@@ -1,0 +1,20 @@
+#include "person/person.h"
+#include <iostream>
+#include <string>
+
+namespace Icmake
+{
+    extern char version[];
+    extern char years[];
+    extern char author[];
+};
+
+void usage(std::string const &progname);
+
+                                     // read a person from cin for the size of
+                                     // the array passed
+void readPersons(Person persons[], size_t size);
+                                     // print all persons in array to cout
+void printPersons(Person const persons[], size_t size);
+
+using namespace std;
