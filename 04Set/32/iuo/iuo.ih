@@ -1,0 +1,8 @@
+#include "iuo"
+
+#include <iostream>
+
+#ifndef SPCH_
+using namespace std;
+using namespace FBB;
+#endif

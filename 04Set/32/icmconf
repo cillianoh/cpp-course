@@ -1,0 +1,23 @@
+#define MAIN                "main.cc"
+#define REFRESH
+#define LIBRARY             "objects"
+#define CLS
+#define USE_ALL             "a"
+#define CXX                 "g++"
+#define CXXFLAGS            "-Wall -Werror -O2 -fdiagnostics-color=never"
+#define SOURCES             "*.cc"
+#define LINKER_OPTIONS      "-s"
+#define ADD_LIBRARIES       ""
+#define ADD_LIBRARY_PATHS   ""
+#define USE_ECHO            ON
+#define TMP_DIR             "tmp"
+#define OBJ_EXT             ".o"
+#define USE_VERSION
+
+#define IH                  ".ih"
+
+#define MULTICOMP           "jobs -q"
+// #define PRECOMP             "-x c++-header"
+#define SPCH                ""
+
+#define DEFCOM              "program"

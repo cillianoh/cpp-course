@@ -1,0 +1,3 @@
+#define LIBRARY             "string"
+
+#include "../icmconf"

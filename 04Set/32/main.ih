@@ -1,0 +1,18 @@
+#include <iostream>
+#include <string>
+
+#include "arg/arg"
+
+#include "keys/keys.h"
+#include "students/students.h"
+
+void usage(std::string const &base);
+
+extern char const year[];
+extern char const version[];
+extern char const author[];
+
+#ifndef SPCH_
+using namespace std;
+using namespace FBB;
+#endif

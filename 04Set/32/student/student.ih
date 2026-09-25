@@ -1,0 +1,16 @@
+#include "student.h"
+
+#include <iomanip>
+
+#include "../arg/arg"
+#include "../mstream/mstream"
+#include "../string/string"
+
+#include <iostream>
+
+#include "../keys/keys.h"
+
+#ifndef SPCH_
+using namespace std;
+using namespace FBB;
+#endif

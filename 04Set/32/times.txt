@@ -1,0 +1,30 @@
+1.  Compilation time: 1m 49s
+
+2.  Compilation time: 37s
+    File                      Size (MB)
+    arg.ih.gch                 47.39
+    datetime.ih.gch            50.11
+    exception.ih.gch           30.24
+    iuo.ih.gch                 24.84
+    keys.ih.gch                43.04
+    main.ih.gch                39.02
+    mbuf.ih.gch                34.94
+    mstream.ih.gch             36.58
+    string.ih.gch              34.25
+    student.ih.gch             43.68
+    students.ih.gch            50.81
+    
+    Total                      434.90
+
+3. Compilation time: 27s
+   File size of spch.gch: 56.27MB
+
+4. Compilation time: 3s
+
+5. Compilation time: 1m 32s
+
+Conclusions:
+    Precompiled headers offer a large increase in speed with the trade off of significant sizes.
+    A single combined SPCH offers even faster compilation speeds with a smaller amount of memory being used because the compiler only parses one large set of headers instead of re-parsing overlapping header content for every class.
+    Ccache drastically reduced compilation time as it recognised there where no changes in files since the last compilation and stored them in cache.
+    Multithreading also offers a decrease in compilation time but it is not as significant as seen with precompiled headers or a single precompiled header.
