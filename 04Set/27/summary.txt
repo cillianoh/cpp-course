@@ -1,0 +1,1 @@
+Implement a program using person which takes multiple inputs, determined by the size of the array, and outputs them accordingly.

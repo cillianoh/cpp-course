@@ -1,0 +1,1 @@
+Design a small class returning substrings from lines passed to cin.

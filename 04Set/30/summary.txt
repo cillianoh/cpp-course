@@ -1,0 +1,1 @@
+Design a simple calculator class utilising functions of the previously made line and parser classes.

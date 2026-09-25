@@ -1,0 +1,1 @@
+Design a class using composition. The class uses the previously constructed line class to parse numbers from cin.
