@@ -1,0 +1,8 @@
+1 What are the differences between pointer variables and arrays?
+    The only difference between a pointer variable and an array is that a pointer is a variables so ptr=a and ptr++ are legal but an array name is not a variable and therefore these constructions are illegal.
+
+2 What are the differences between pointer variables and reference variables?
+   Pointer variables are variables that point to a specific location in memory and can act as that variable. Reference variables contain the address of a variables memory.
+
+4. What is meant by "pointer arithmetic"?
+    "Pointer arithmetic" is when a pointer is combined with an int expression to change the value it points to. 
