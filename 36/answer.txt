@@ -1,0 +1,86 @@
+----------------------------------------------------------------------------
+  int x[8];           x[2] = x[3];
+
+pointer notation:     *(x + 2) = *(x + 3);
+
+semantics:  
+   
+This operation assigns to the address of *(x + 2) the value
+stored in the pointer *(x + 3).
+----------------------------------------------------------------------------
+  char *argv[8];      cout << argv[2];
+
+pointer notation:     cout << *(argv + 2);
+
+semantics: 
+   
+The pointer will land on the address corresponding to 
+base address + 2 * sizeof(char*) and will print out the 
+second string that is contained. 
+----------------------------------------------------------------------------
+  int x[8];           &x[10] - &x[3];
+		 
+pointer notation:     &*(x + 10) - &*(x + 3) 
+
+semantics:    
+
+Even though the pointer technically lands on unwanted memory at first,
+removing three positions makes it point to some defined value, so in 
+the end we get the address of what the pointer is pointing to, so &[x7].
+	              
+----------------------------------------------------------------------------
+  main's argv;        argv++[0];
+
+pointer notation:     *(argv++);	
+
+semantics:
+
+Assuming the executable + first argument is = ./a.out trial:
+Here first increment is applied to argv which is a pointer to a pointer to char
+So the increment shifts to which pointer of chars argv points to, hence dereferencing
+Will output the second string given in the prompt, hence "trial".
+
+----------------------------------------------------------------------------
+  main's argv;        argv[0]++;
+
+pointer notation:     (*argv)++;
+
+semantics:   
+  
+Assuming the executable + first argument is = ./a.out trial:
+then the pointer is dereferenced first so the variable on which
+the increment operator acts is the second string in argv, hence
+the string "./a.out", but argv is a pointer to chars, so 
+incrementing it will shift the pointer from "." to "/" .
+
+----------------------------------------------------------------------------
+  main's argv;        ++argv[0];
+
+pointer notation:     ++(*argv);
+
+semantics:
+
+Assuming the executable + first argument is = ./a.out trial:
+Here there could be ambiguity, but we see (by compiling) that first the pointer that points
+To a pointer of chars is not altered, so our string is still "./a.out" , but now 
+We shift the character by one so the ending result is "/" in the string "./a.out".
+
+----------------------------------------------------------------------------
+  main's argv;        ++argv[0][2];
+
+pointer notation:     ++(*(*argv) + 2);
+
+semantics:
+
+Assuming the executable + first argument is = ./a.out trial:
+Here we first dereference the pointer so we are accessing a specific string in the array,
+More specifically the name of the program since it's argv[0] = "./a.out", then, we access the 
+Third character in argv[0], which is represented by argv[0][2] and hence corresponds to the 
+character "a" in the string. After all of this is done, we increase the value of a, but since
+it's a char, ++a will return the ASCII value right after the a one, which is b, hence the 
+Whole sequence will output the character b.
+
+
+
+----------------------------------------------------------------------------
+

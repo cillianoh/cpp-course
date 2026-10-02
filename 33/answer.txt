@@ -1,0 +1,19 @@
+1. What differences exist between pointer variables and arrays? 
+
+An array is a collection of objects which is laid out continuously in memory while a pointer is a variable which holds a value that is an address in memory. As a matter of fact they are two completely different things , however they can be used in a way that makes them seem the same. 
+There exist a conversion called "array-to-pointer" conversion, for example:
+
+  int x[5];
+  int *p = x;
+
+Here initializing p only works by using this special conversion. Here because this conversion is used to initialise a pointer, the compiler implicitly converts x to a pointer which points to the address of x[0]. This suggests that there is a relationship between expressions involving pointers and expressions involving arrays, more precisely, as described in the annotations in pointers arithmetics, pointer syntax can be used to work with arrays and array syntax can be used to work with pointers. One of the main differences however, for this set of exercises specifically, is that arrays cannot be reassigned while pointers can; so in a way arrays are a subset of the pointers set.
+
+2. what differences exist between pointer variables and reference variables?
+
+Unlike references, pointers can be reassigned while a reference must be bound at initialisation and cannot be rebound. Also pointers have a distinct, visible memory address that can be accessed via & and a certain size in memory that can be measured using the sizeof operator; the same can't be said about a reference since using those operators returns the values corresponding to what the reference is bound to. It is possible to create an array of pointers, but not an array of references, because pointers are objects while references are not. Furthermore, you can have arbitrarily nested pointers to pointers offering extra levels of indirection, while for references the story is different, since references or references collapse. Lastly, a pointer can be assigned to nullptr, whereas a reference must be bound to an existing object.
+
+4. what is meant by `pointer arithmetic'?
+
+Pointer arithmetic allows you to perform arithmetic operations on pointers to navigate through memory addresses.  Instead of modifying the raw numerical address by bytes, the compiler automatically scales the operation based on the size of the data type the pointer points to.
+
+
