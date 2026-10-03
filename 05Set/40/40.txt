@@ -1,0 +1,5 @@
+1. It breaks due to the object's size and layout. When main.cc was compiled the size of Data was reserved on the stack. When the library was rebuilt with extra data members it was larger than the original allocation in main.o. The library code then writes beyond the object, corrupting the stack and causing a segmentation fault.
+
+2. When using a pointer to the implementation main.o's pointer always points to the data member in data and it never gets changed when the data is updated. Instead the class points to seperated data members which are updated when compiling the class, resulting in no segmentation fault
+
+3. A new data member can't be added to the class itself becuase that would change the size of Data which would break the ABI and force the user to recompile. Instead a separate struct inside the library that holds the additional members could be defined. The class's constructors then initialise this data and it is removed when the destructor is called.

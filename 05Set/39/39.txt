@@ -1,0 +1,39 @@
+Commands used for library and linking:
+g++ -std=c++26 -Wall -Werror -c display.cc read.cc
+ar rcs libdata.a display.o read.o
+g++ -std=c++26 -Wall -Werror -c main.cc
+g++ -o program main.o data/libdata.a
+./program < data.in
+
+Results:
+Object 1: value is: 1
+Object 2: value is: 2
+Object 3: value is: 3
+Object 4: value is: 4
+
+After adding d_text and updating the library when the program runs a segmentation fault occurs
+
+Commands used for library and linking (after pimpl implementation):
+g++ -std=c++26 -Wall -Werror -c display.cc read.cc data.cc ~data.cc
+ar rcs libdata.a display.o read.o data.o ~data.o
+g++ -std=c++26 -Wall -Werror -c main.cc
+g++ -o program main.o data/libdata.a
+./program < data.in
+
+Results (After pimpl implementation): 
+Object 1: value is: 1
+Object 2: value is: 2
+Object 3: value is: 3
+Object 4: value is: 4
+
+Commands used for updating library (after pimpl implementation):
+g++ -std=c++26 -Wall -Werror -c display.cc read.cc data.cc ~data.cc
+ar rcs libdata.a display.o read.o data.o ~data.o
+g++ -o program main.o data/libdata.a
+./program < data.in
+
+Results (After pimpl implementation + updating library): 
+Object 1: value is: 1
+Object 2: value is: 2
+Object 3: value is: 3
+Object 4: value is: 4
