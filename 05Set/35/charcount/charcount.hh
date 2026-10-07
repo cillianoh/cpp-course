@@ -18,12 +18,12 @@ struct CharInfo
 
 
     CharInfo();                     // default constructor
-    void add(char ch);              // add's a char to the list of objects
-    charStatus locate(char ch);     // locate's where a char should be in list
-
+    void add(char const ch);        // add's a char to the list of objects
+                                    // locate's where a char should be in list
+    charStatus locate(char const ch);  
     private: 
-        void append(char ch);       // add's char to end of list
-        void insert(char ch);       // inserts char at d_charLoc in list
+        void append(char const ch); // add's char to end of list
+        void insert(char const ch); // inserts char at d_charLoc in list
 };
 
 struct CharCount
@@ -46,7 +46,7 @@ struct Char
     size_t d_freq;                  // frequency of the char
 
     Char() = default;               // default constructor
-    Char(char ch);                  // constructo setting d_char as ch
+    Char(char ch);                  // constructor setting d_char as ch
 };
 
 #include "charinfo.f"

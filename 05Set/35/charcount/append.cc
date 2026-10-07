@@ -1,6 +1,6 @@
 #include "charcount.ih"
 
-void CharInfo::append(char ch)
+void CharInfo::append(char const ch)
 {
                                     // create a new list that is 1 longer
     Char *tempList = new Char[d_nCharObj + 1];

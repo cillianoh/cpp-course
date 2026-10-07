@@ -2,6 +2,8 @@
 
 #include "finder/finder.h"
 
+Finder PhoneBook::s_finder;         // the phonebook's single Finder object
+
 //phonebook
 class PhoneBook
 {

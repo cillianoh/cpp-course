@@ -1,6 +1,6 @@
 #include "charcount.ih"
 
-CharInfo::charStatus CharInfo::locate(char ch)
+CharInfo::charStatus CharInfo::locate(char const ch)
 {
                                     // for all the objects in the list
     for (size_t indx = 0; indx != d_nCharObj; ++indx)      

@@ -1,1 +1,0 @@
-Understand pointers conceptually by answering questions.

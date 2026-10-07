@@ -1,6 +1,6 @@
 #include "charcount.ih"
 
-void CharInfo::add(char ch)
+void CharInfo::add(char const ch)
 {
     if (d_nCharObj == 0)            // if no objects in list
     {
