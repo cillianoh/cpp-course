@@ -1,0 +1,18 @@
+--create a library libdata.a and use the provided main function defining a local Data object. Compile main.cc to an object file. 
+
+By using the Makefile I use to build my projects, I used the command make in the directory of the exercise, which created 
+all the object files needed and united them in the library called libdata.a . 
+After this was done, I used the command given here, since the library and main.o reside in the same directory:
+
+jarvis main.cc.o libdata.a -o main
+
+this will create an executable called main which executes as it should
+
+-- create a new version of the library, after uncommenting the definition of d_text in data/data.h and its use in data/read.cc.      
+
+After following the entire procedure, my linker threw an error right after
+trying to link the existing main.cc.o with my libdata.a, as expected by the
+assignment.
+However, after employing the pimpl method with the .cc files that are in the 
+directory, everything worked fine, in both case scenario, as can be verified
+by just compiling everything and running the executable.
